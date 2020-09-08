@@ -12,5 +12,11 @@ package co.edu.unal.etl.sakila;
 public class Main {
     public static void main(String[] args) {
         System.out.println("HELLO");
+        DbManager.getInstance().listFromHql("SELECT a FROM Actor a");
+        
+        DbManager.getInstance().listFromHql("SELECT a FROM Actor a");
+        
     }
+
+
 }

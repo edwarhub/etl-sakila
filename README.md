@@ -13,12 +13,12 @@ edrojasb@unal.edu.co - edwar.red@gmail.com <br/>
 
 ## INSTALL DB
 ```sh
-cd etl-sakila/sakila-db
 mysql 
 mysql>
 mysql> create database sakila
 mysql> exit
 
+cd etl-sakila/sakila-db
 $ mysql sakila < ./sakila-db/sakila-schema.sql
 $ mysql sakila < ./sakila-db/sakila-data.sql
 ```

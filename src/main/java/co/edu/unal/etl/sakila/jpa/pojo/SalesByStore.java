@@ -9,6 +9,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -36,6 +37,8 @@ public class SalesByStore implements Serializable {
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Column(name = "total_sales")
     private BigDecimal totalSales;
+    @Id
+    private Long id;
 
     public SalesByStore() {
     }
@@ -62,6 +65,14 @@ public class SalesByStore implements Serializable {
 
     public void setTotalSales(BigDecimal totalSales) {
         this.totalSales = totalSales;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
     
 }

@@ -10,6 +10,7 @@ import java.math.BigDecimal;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -31,6 +32,7 @@ public class SalesByFilmCategory implements Serializable {
     private static final long serialVersionUID = 1L;
     @Basic(optional = false)
     @Column(name = "category")
+    @Id
     private String category;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Column(name = "total_sales")

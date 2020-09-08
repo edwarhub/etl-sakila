@@ -9,6 +9,7 @@ import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -37,6 +38,7 @@ public class CustomerList implements Serializable {
     private static final long serialVersionUID = 1L;
     @Basic(optional = false)
     @Column(name = "ID")
+    @Id
     private short id;
     @Column(name = "name")
     private String name;

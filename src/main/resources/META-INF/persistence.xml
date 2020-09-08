@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="cco.edu.unal.etl.sakila_etl-sakila_jar_1.0PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.FilmList</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.Film</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.Payment</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.SalesByFilmCategory</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.Category</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.City</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.Inventory</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.ActorInfo</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.Store</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.Staff</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.Rental</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.Country</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.Address</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.CustomerList</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.SalesByStore</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.FilmActor</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.FilmCategory</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.FilmText</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.Customer</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.Language</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.NicerButSlowerFilmList</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.Actor</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.StaffList</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sakila?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+    </properties>
+  </persistence-unit>
+</persistence>

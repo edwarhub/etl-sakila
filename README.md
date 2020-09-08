@@ -1,8 +1,8 @@
 # ABOUT
-Universidad Nacional de Colombia
-Bases de datos avanzadas
-By. Edwar A. Rojas Blanco
-edrojasb@unal.edu.co - edwar.red@gmail.com
+### Universidad Nacional de Colombia
+### Bases de datos avanzadas
+### By. Edwar A. Rojas Blanco
+### edrojasb@unal.edu.co - edwar.red@gmail.com
 
 # PREREQUISITES
  - Java SDK 8
@@ -15,7 +15,7 @@ cd etl-sakila/sakila-db
 ./mysql sakila < ./sakila-db/sakila-data.sql
 ```
 
-#CONFIG. DB CONNECTION
+# CONFIG. DB CONNECTION
 
 Open file, and change data base connection properties
 ```sh

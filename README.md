@@ -1,8 +1,8 @@
 # ABOUT
-### Universidad Nacional de Colombia
-### Bases de datos avanzadas
-### By. Edwar A. Rojas Blanco
-### edrojasb@unal.edu.co - edwar.red@gmail.com
+Universidad Nacional de Colombia <br/>
+Bases de datos avanzadas <br/>
+By. Edwar A. Rojas Blanco <br/>
+edrojasb@unal.edu.co - edwar.red@gmail.com <br/>
 
 # PREREQUISITES
  - Java SDK 8

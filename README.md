@@ -18,9 +18,9 @@ mysql>
 mysql> create database sakila
 mysql> exit
 
-cd etl-sakila/sakila-db
-$ mysql sakila < ./sakila-db/sakila-schema.sql
-$ mysql sakila < ./sakila-db/sakila-data.sql
+$ cd etl-sakila/sakila-db
+$ unzip sakila-db-etl.sql.zip
+$ mysql sakila < ./sakila-db/sakila-db-etl.sql
 ```
 
 ## CONFIG. DB CONNECTION
@@ -44,11 +44,11 @@ etl-sakila/src/main/resources/META-INF/persistence.xml
 ## INSTALL APP
 ```sh
 cd etl-sakila/
-mvn clean install
+mvn clean compile assembly:single
 ```
 
 ## RUN APP
 ```sh
-cd etl-sakila/target
-java -jar  
+cd etl-sakila/target$
+java -jar etl-sakila-1.0-jar-with-dependencies.jar
 ```

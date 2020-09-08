@@ -25,6 +25,12 @@
     <class>co.edu.unal.etl.sakila.jpa.pojo.NicerButSlowerFilmList</class>
     <class>co.edu.unal.etl.sakila.jpa.pojo.Actor</class>
     <class>co.edu.unal.etl.sakila.jpa.pojo.StaffList</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.BiRental</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.BiLanguage</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.BiStore</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.BiDate</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.BiCity</class>
+    <class>co.edu.unal.etl.sakila.jpa.pojo.BiFilm</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sakila?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

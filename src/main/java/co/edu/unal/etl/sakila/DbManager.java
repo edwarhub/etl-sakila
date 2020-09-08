@@ -5,7 +5,6 @@
  */
 package co.edu.unal.etl.sakila;
 
-import co.edu.unal.etl.sakila.jpa.pojo.Actor;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
@@ -40,6 +39,20 @@ public class DbManager {
         return em;
     }
 
+    public <T> T findById(Object id, Class<T> classT) {
+        T obj = null;
+        getEntityManager().getTransaction().begin();
+        try {
+            obj = em.find(classT, id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            getEntityManager().getTransaction().rollback();
+        } finally {
+            getEntityManager().close();
+        }
+        return (T) obj;
+    }
+
     public List listFromHql(String hql) {
         List l = new ArrayList();
 
@@ -72,11 +85,24 @@ public class DbManager {
         return l;
     }
 
-    private void persist(Object object) {
+    public void save(Object object) {
         getEntityManager().getTransaction().begin();
         try {
-            //em.persist(object);
-            //em.getTransaction().commit();
+            em.persist(object);
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+            getEntityManager().getTransaction().rollback();
+        } finally {
+            getEntityManager().close();
+        }
+    }
+
+    public void update(String sql) {
+        getEntityManager().getTransaction().begin();
+        try {
+            em.createNativeQuery(sql).executeUpdate();
+            em.getTransaction().commit();
         } catch (Exception e) {
             e.printStackTrace();
             getEntityManager().getTransaction().rollback();

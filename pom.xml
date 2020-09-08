@@ -19,9 +19,22 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>co.edu.unal.etl.sakila.Main</mainClass>
+                            <mainClass>co.edu.unal.etl.sakila.main.Main</mainClass>
                         </manifest>
                     </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>co.edu.unal.etl.sakila.main.Main</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
                 </configuration>
             </plugin>
         </plugins>

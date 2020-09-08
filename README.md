@@ -1,21 +1,29 @@
-# ABOUT
+# ETL - SAKILA
+
+## ABOUT
 Universidad Nacional de Colombia <br/>
 Bases de datos avanzadas <br/>
 By. Edwar A. Rojas Blanco <br/>
 edrojasb@unal.edu.co - edwar.red@gmail.com <br/>
 
-# PREREQUISITES
+## PREREQUISITES
  - Java SDK 8
  - Apache Maven 3.6.0 or later
+ - Mysql 10.4.11-MariaDB or later 
 
-# INSTALL DB
+## INSTALL DB
 ```sh
 cd etl-sakila/sakila-db
-./mysql sakila < ./sakila-db/sakila-schema.sql
-./mysql sakila < ./sakila-db/sakila-data.sql
+mysql 
+mysql>
+mysql> create database sakila
+mysql> exit
+
+$ mysql sakila < ./sakila-db/sakila-schema.sql
+$ mysql sakila < ./sakila-db/sakila-data.sql
 ```
 
-# CONFIG. DB CONNECTION
+## CONFIG. DB CONNECTION
 
 Open file, and change data base connection properties
 ```sh
@@ -33,13 +41,13 @@ etl-sakila/src/main/resources/META-INF/persistence.xml
 </persistence>
 ```
 
-# INSTALL APP
+## INSTALL APP
 ```sh
 cd etl-sakila/
 mvn clean install
 ```
 
-# RUN APP
+## RUN APP
 ```sh
 cd etl-sakila/target
 java -jar  
